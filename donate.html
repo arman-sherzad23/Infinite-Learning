@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Support Our Mission - LMS Portal</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+   <link rel="stylesheet" href="donate.css">
+</head>
+<body data-theme="light">
+   <!-- Navbar -->
+   <nav class="navbar">
+       <div class="nav-container">
+           <div class="logo">
+               <img src="Infinite Learning.png" alt="Infinite Learning Logo" loading="lazy">
+               <span>Infinite Learning</span>
+           </div>
+           <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
+            <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="donate.html" class="active" ><i class="fas fa-heart"></i>Support Us</a></li>
+            <button class="theme-toggle" id="themeToggle" style="background: transparent;">
+                <i class="fas fa-moon"></i>
+            </button>
+        </ul>
+            <div class="mobile-menu">
+               <i class="fas fa-bars"></i>
+           </div>
+       </div>
+   </nav>
+    <main class="donation-page">
+       <div class="donation-container">
+           <header class="donation-header">
+               <h1>Help us make quality education accessible to everyone</h1>
+           </header>
+            <div class="stats-container">
+               <div class="stat-item">
+                   <span class="stat-number" data-count="10000">10000</span>
+                   <span class="stat-label">Students Helped</span>
+               </div>
+               <div class="stat-item">
+                   <span class="stat-number" data-count="500">500</span>
+                   <span class="stat-label">Free Courses</span>
+               </div>
+               <div class="stat-item">
+                   <span class="stat-number" data-count="50">50</span>
+                   <span class="stat-label">Countries Reached</span>
+               </div>
+           </div>
+
+            <section class="impact-section">
+               <h2>Your Impact</h2>
+               <div class="donation-card">
+                   <div class="card-inner">
+                       <!-- Front side -->
+                       <div class="card-front">
+                           <h3>Choose Your Impact</h3>
+                           <div class="current-btc-price">
+                               <span>Current BTC Price: </span>
+                               <span id="btcCurrentPrice">Loading...</span>
+                           </div>
+                           <div class="amount-buttons">
+                               <button class="amount-btn" data-amount="5">$5</button>
+                               <button class="amount-btn" data-amount="10">$10</button>
+                               <button class="amount-btn" data-amount="25">$25</button>
+                               <button class="amount-btn" data-amount="50">$50</button>
+                               <button class="amount-btn custom">Custom</button>
+                           </div>
+                           <button class="donate-now-btn">Donate Now</button>
+                       </div>
+                        <!-- Back side -->
+                       <div class="card-back">
+                           <h3>Bitcoin Payment Information</h3>
+                           <form id="payment-form" class="payment-form">
+                               <div class="btc-payment">
+                                   <div class="btc-details">
+                                       <p>Send your donation to this Bitcoin address:</p>
+                                       <div class="btc-address">
+                                           <code id="btcAddress">bc1q9ng3zfd5eeuwvcdr8hret2e70tnree9ctaus60</code>
+                                           <button type="button" class="copy-btn" id="copyBtc">
+                                               <i class="fas fa-copy"></i>
+                                           </button>
+                                       </div>
+                                       <div class="network-info">Network: BTC(SegWit)</div>
+                                       <div class="qr-code">
+                                           <img src="Arman_khan2binancepay.jpg" alt="Bitcoin QR Code" id="qrCodeImage" class="qr-image">
+                                           <img src="BinanceArmankhan.jpg" alt="Binance QR Code" class="qr-image" style="display: none;">
+                                           <button type="button" class="switch-qr-btn" id="switchQRBtn">
+                                               <i class="fas fa-sync-alt"></i> Switch QR Code
+                                           </button>
+                                       </div>
+                                       <div class="btc-warning">
+                                           Don't send NFTs to this address. Smart contract deposits are not supported with the exception of ETH via ERC20, BSC via BEP20, Arbitrum and Optimism networks.
+                                       </div>
+                                       <div id="btcAmount" class="btc-amount">
+                                           <p>Selected amount: <span id="usdAmount">$0</span></p>
+                                           <p>≈ <span id="btcEquivalent">0.00000000</span> BTC</p>
+                                       </div>
+                                   </div>
+                               </div>
+                                <div class="button-group">
+                                   <button type="submit" class="submit-btn">Complete Donation</button>
+                                   <button type="button" class="back-btn">Go Back</button>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+                <div class="impact-grid">
+                   <div class="impact-item">
+                       <div class="impact-icon">
+                           <i class="fas fa-laptop"></i>
+                       </div>
+                       <h3>$5</h3>
+                       <p>Provides access to one course for a student in need</p>
+                   </div>
+                   <div class="impact-item">
+                       <div class="impact-icon">
+                           <i class="fas fa-book"></i>
+                       </div>
+                       <h3>$25</h3>
+                       <p>Supports course development and maintenance</p>
+                   </div>
+                   <div class="impact-item">
+                       <div class="impact-icon">
+                           <i class="fas fa-globe"></i>
+                       </div>
+                       <h3>$50</h3>
+                       <p>Helps translate courses into different languages</p>
+                   </div>
+               </div>
+           </section>
+       </div>
+   </main>
+   <footer class="footer">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About LMS Portal</h3>
+                <p>Empowering learners worldwide through innovative online education solutions.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@lmsportal.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Education St, Learning City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LMS Portal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/qrcode.js/qrcode.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+   <script src="theme.js"></script>
+   <script src="donate.js"></script>
+</body>
+</html>
